@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    height: 100vh;
+    width: 100%;
+}
+.page__container{
+    background-image: url("./assets/fondo_al_60.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+.page__header-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.page__tittle{
+    text-align: center;
+    grid-column: 2 / 3;
+}
+.page__logo{
+    width: 40em;
+}
+.page__nav{
+    grid-column: 3 / 3;
+}
+.page__ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page__list{
+    list-style-type: none;
+    margin: 0 .5em;
+}
+.page__idiomas{
+    width: 3em;
+}
+.page__idiomas-link{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+.page__list:nth-child(2):hover, .page__list:nth-child(3):hover{
+    transition: transform 400ms ease;
+    text-shadow: #000 1px 1px 2px;
+    transform: scale(1.2);
+}
+.line::after{
+    content: '|';
+    color: #fff;
+    margin-left:.9em;
+}
+
+
+
+/* SECCION DEL MAIN */
+
+
+
+.page__main{
+    display: flex;
+    justify-content: flex-end;
+}
+.page__section,.page__section-english{
+    width: 35vw;
+    margin: 1em 3em;
+    text-align: justify;
+}
+.page__section{
+    display: none;
+}
+.page__subtittle{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 1em 0;
+    color: #fff;
+}
+.page__parrafo{
+    color: #fff;
+    font-size: 2.2em;
+    margin: 0.5em 0;
+}
+
+
+
+/* SECCION DEL FOOTER */
+
+
+
+.page__footer{
+    text-align: center;
+    /* position: relative;
+    bottom: 0; */
+    width: 100%;
+}
+.page__ul-footer{
+    list-style-type: none;
+    padding: 3em 0;
+}
+.page__ul-footer > a{
+    text-decoration: none;
+}
+.page__redes-sociales{
+    width: 6em;
+}
+.page__redes-sociales:hover{
+    transition: transform 400ms ease;
+    text-shadow: #000 1px 1px 2px;
+    transform: scale(1.2);
+}
+.page__parrafo-footer{
+    margin: .3em;
+    font-size: 1.5em;
+    color:#fff;
+    text-shadow: #000 1px 1px 2px;
+}
+.page__container-parrafos{
+    display: none;
+}
+.page__enlaces{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+/* Version Tablet */
+
+
+
+@media (min-width:965px) and (max-width:1280px) {
+    .page__logo{
+        width: 35em;
+    }
+    .page__section,.page__section-english{
+        text-shadow: #000 1px 1px 2px;
+    }
+    .page__section, .page__section-english {
+        width: 45vw;
+    }
+}
+
+
+
+/* Version Mobile */
+
+
+
+@media (min-width:650px) and (max-width:965px) {
+    .page__container{
+        background-image: url("./assets/fondo_al_50.png");
+    }
+    .page__header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .page__logo{
+        width: 31em;
+    }
+    .page__section,.page__section-english{
+        width: 60vw;
+        text-shadow: #000 1px 1px 2px;
+    }
+}
+@media (min-width:480px) and (max-width:650px) {
+    .page__container{
+        background-image: url("./assets/fondo_al_50.png");
+    }
+    .page__section,.page__section-english{
+        width: 100%;
+    }
+    .page__logo{
+        width: 30em;
+    }
+    .page__header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .page__parrafo {
+        font-size:2em;
+    }
+}
+@media (min-width:280px) and (max-width:480px) {
+    .page__container{
+        background-image: url("./assets/fondo_al_50.png");
+    }
+    .page__header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .page__section,.page__section-english{
+        width: 100%;
+    }
+    .page__container{
+        height: 100%;
+    }
+    .page__subtittle{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .page__parrafo-footer{
+        font-size: 1.6em;
+    }
+    .page__parrafo{
+        font-size: 1.6em;
+    }
+    .page__ul-footer{
+        padding: 1em 0;
+    }
+    .page__logo{
+        width: 25em;
+    }
+}
+@media (max-width:280px){
+    .page__container{
+        background-image: url("./assets/fondo_al_50.png");
+        background-color: #3c2222;
+    }
+}
